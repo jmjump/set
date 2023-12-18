@@ -1,0 +1,12 @@
+{
+    "num_cards": 243,
+    "num_cards_in_set": 4,
+    "num_cards_on_board": 12,
+    "attributes": [
+        { "name": "Number", "values": ["5", "2", "3"] },
+        { "name": "Size", "values": ["small", "medium", "large"] },
+        { "name": "Fill",   "values": ["Solid", "Open", "Striped"] },
+        { "name": "Color", "values": ["pink", "blue", "gray"] },
+        { "name": "Shape", "values": ["circle", "square", "rectangle"] }
+    ]
+}

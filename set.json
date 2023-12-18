@@ -1,0 +1,9 @@
+{
+    "num_cards": 81,
+    "attributes": [
+        { "name": "Number", "values": ["1", "2", "3"] },
+        { "name": "Fill",   "values": ["Solid", "Open", "Striped"] },
+        { "name": "Color", "values": ["Red", "Green", "Blue"] },
+        { "name": "Shape", "values": ["Oval", "Diamond", "Squiggle"] }
+    ]
+}
