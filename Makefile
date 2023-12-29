@@ -4,8 +4,15 @@ play:
 debug:
 	python3 main.py -v
 
+insane:
+	python3 main.py -c insane_set.json
+
 test:
 	python3 test_permutations.py
+	python3 test_set.py
+
+test_set:
+	python3 test_set.py
 
 
 # PEP8 Linting

@@ -60,7 +60,7 @@ class Card():
 
 
 class Set():
-    def __init__(self, config, logger=None):
+    def __init__(self, config={}, logger=None):
         global g_logger
         g_logger = logger if logger is not None else logging.getLogger(__name__)
 
@@ -71,13 +71,20 @@ class Set():
         default_num_cards_in_set = 3
         default_num_cards = 81
         default_num_cards_on_board = 12
+        default_attributes = [
+            {'name': 'Number', 'values': ['1', '2', '3']},
+            {'name': 'Fill', 'values': ['Solid', 'Open', 'Striped']},
+            {'name': 'Color', 'values': ['Red', 'Green', 'Blue']},
+            {'name': 'Shape', 'values': ['Oval', 'Diamond', 'Squiggle']}
+        ]
 
         self.num_cards_in_set = config.get('num_cards_in_set', default_num_cards_in_set)
         self.num_cards = config.get('num_cards', default_num_cards)
         self.num_cards_on_board = config.get('num_cards_on_board', default_num_cards_on_board)
+        attributes = config.get('attributes', default_attributes)
 
         self.attributes = []
-        for attribute in config['attributes']:
+        for attribute in attributes:
             self.attributes.append(Attribute(attribute['name'], attribute['values']))
 
         self.cards = []
